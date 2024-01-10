@@ -1,0 +1,52 @@
+appBar: AppBar(
+          title: const Text("deneme uygulaması"),
+          centerTitle: true,
+          backgroundColor: Colors.green,
+          leading: const Text("menu"),
+        ),
+
+Center(
+          child: Image(
+            image: AssetImage("lib/assets/images/logo-1.png"),
+          ),
+        ),
+Container(
+          margin: EdgeInsets.all(20.0),
+          color: HexColor(primarycolor),
+          child: const Text("asaf"),
+        ),
+Scaffold(
+        appBar: AppBar(
+          title: const Text("deneme uygulaması"),
+          centerTitle: true,
+          backgroundColor: Colors.green,
+          leading: const Text("menu"),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    value_2 = value + 1;
+                  });
+                },
+                child: Text("tıkla la")),
+            Text(value_2.toString()),
+            Container(
+              padding: EdgeInsets.all(18.0),
+              color: HexColor(primarycolor),
+              child: Text("container"),
+            ),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              value = value + 1;
+            });
+          },
+          child: Text(value.toString()),
+        ),
+      ),
